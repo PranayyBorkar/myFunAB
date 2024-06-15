@@ -1,0 +1,37 @@
+/* Reset margin and padding for all elements */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Keyframes for a blinking animation */
+@keyframes blinking {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Styles for the fullscreen button */
+.fullscreen-button {
+  z-index: 5;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px 20px;
+  font-size: 10vh;
+  background-color: #980002; /* Dark red background color */
+  border-radius: 20px;
+  color: #fff; /* White text color */
+  border: 2px solid #fff; /* White border */
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.3); /* White shadow with transparency */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.fullscreen-button:hover {
+  transform: translate(-50%, -50%) scale(1.1); /* Scale the button to make it pop */
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.5); /* Increase the shadow size and intensity on hover */
+}

@@ -1,0 +1,1591 @@
+﻿
+/*Font*/
+@font-face {
+    /*font-family: 'Lobster';
+    src: url('C:\Users\prana\OneDrive\Desktop\ab\AndarBahar\Font\Lobster-Regular_3.ttf') format('truetype');*/
+    /* Add additional src lines for different font formats if needed */
+    /* font-weight: normal;*/
+    /*font-style: normal;*/
+}
+
+
+/*Body*/
+body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: Lobster, sans-serif;
+    font-size: 22px;
+}
+
+
+/*Container Main*/
+containerMain {
+    position: relative;
+}
+
+
+/*Backgroung Image*/
+#backgroundImg {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+
+
+/*Logo Images*/
+
+
+#logoGIF {
+    position: absolute;
+    top: 0; /* Position the textbox vertically at 50% from the top */
+    left: 31%;
+    height: 13vh;
+    width: 38vw;
+}
+
+/* bottom Message */
+#bottomMessage {
+    position: absolute;
+    bottom: -50px; /* Start hidden below the viewport */
+    height: 3vh;
+    width: 100vw;
+    color: #e6c933;
+    text-align: center;
+    font-size: large;
+    font-weight: 800;
+    
+    background-color: transparent;
+    opacity: 0;
+    transition: bottom 0.5s, opacity 1.6s;
+}
+
+#bottomMessage.show {
+    bottom: 0; /* Position the textbox at the bottom */
+    opacity: 1;
+}
+
+
+/*Score and Winning Text*/
+#scoreText {
+    position: absolute;
+    top: 7.8%; /* Position the textbox vertically at 50% from the top */
+    left: 13.7%; /* Position the textbox horizontally at 50% from the left */
+    transform: translate(-50%, -50%);
+    height: 3vh;
+    width: 14vw;
+    font-size: 3vh;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    text-align: right;
+    font-family: Lobster, sans-serif;
+    background-color: transparent;
+}
+
+#winningText {
+    position: absolute;
+    top: 7.8%; /* Position the textbox vertically at 50% from the top */
+    right: 0.2%; /* Position the textbox horizontally at 50% from the left */
+    transform: translate(-50%, -50%);
+    height: 3vh;
+    width: 14vw;
+    font-size: 3vh;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    text-align: right;
+    font-family: Lobster, sans-serif;
+    background-color: transparent;
+}
+
+
+
+/*Total Bet*/
+#LabelTotalBet {
+    position: absolute;
+    top: 94.8%; /* Position the textbox vertically at 50% from the top */
+    right: -3.4%; /* Position the textbox horizontally at 50% from the left */
+    transform: translate(-50%, -50%);
+    height: 2vh;
+    width: 9.5vw;
+    font-size: 2.5vh;
+    font-weight: bold;
+   /* border: 1px solid yellow; */
+    
+    text-align: right;
+    font-family: Lobster, sans-serif;
+    background-color: transparent;
+}
+
+
+
+
+/*Display cards*/
+#ASpadeImgHead {
+    position: absolute;
+    top: 15%; /* Position the textbox vertically at 50% from the top */
+    left: 5.4%; /* Position the textbox horizontally at 50% from the left */
+}
+
+    #ASpadeImgHead img {
+        height: 12.8vh;
+        width: 6.4vw;
+        transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out, filter 0.3s ease-in-out;
+    }
+
+    #ASpadeImgHead:hover img {
+        transform: scale(1.2);
+        filter: brightness(1.1);
+        background: none;
+       
+    }
+
+
+#twoSpadeImgHead {
+    position: absolute;
+    top: 15%; /* Position the textbox vertically at 50% from the top */
+    left: 12.4%; /* Position the textbox horizontally at 50% from the left */
+}
+
+    #twoSpadeImgHead img {
+        height: 12.8vh;
+        width: 6.4vw;
+        transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out, filter 0.3s ease-in-out;
+    }
+
+    #twoSpadeImgHead:hover img {
+        transform: scale(1.2);
+        filter: brightness(1.1);
+        background: none;
+        
+    }
+
+
+#threeSpadeImgHead {
+    position: absolute;
+    top: 15%; /* Position the textbox vertically at 50% from the top */
+    left: 19.4%; /* Position the textbox horizontally at 50% from the left */
+}
+
+    #threeSpadeImgHead img {
+        height: 12.8vh;
+        width: 6.4vw;
+        transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out, filter 0.3s ease-in-out;
+    }
+
+    #threeSpadeImgHead:hover img {
+        transform: scale(1.2);
+        filter: brightness(1.1);
+        background: none;
+       
+    }
+
+
+#fourSpadeImgHead {
+    position: absolute;
+    top: 15%; /* Position the textbox vertically at 50% from the top */
+    left: 26.2%; /* Position the textbox horizontally at 50% from the left */
+}
+
+    #fourSpadeImgHead img {
+        height: 12.8vh;
+        width: 6.4vw;
+        transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out, filter 0.3s ease-in-out;
+    }
+
+    #fourSpadeImgHead:hover img {
+        transform: scale(1.2);
+        filter: brightness(1.1);
+        background: none;
+       
+    }
+
+
+#fiveSpadeImgHead {
+    position: absolute;
+    top: 15%; /* Position the textbox vertically at 50% from the top */
+    left: 33.2%; /* Position the textbox horizontally at 50% from the left */
+}
+
+    #fiveSpadeImgHead img {
+        height: 12.8vh;
+        width: 6.4vw;
+        transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out, filter 0.3s ease-in-out;
+    }
+
+    #fiveSpadeImgHead:hover img {
+        transform: scale(1.2);
+        filter: brightness(1.1);
+        background: none;
+        
+    }
+
+
+#sixSpadeImgHead {
+    position: absolute;
+    top: 15%; /* Position the textbox vertically at 50% from the top */
+    left: 40.1%; /* Position the textbox horizontally at 50% from the left */
+}
+
+    #sixSpadeImgHead img {
+        height: 12.8vh;
+        width: 6.4vw;
+        transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out, filter 0.3s ease-in-out;
+    }
+
+    #sixSpadeImgHead:hover img {
+        transform: scale(1.2);
+        filter: brightness(1.1);
+        background: none;
+        
+    }
+
+
+#sevenSpadeImgHead {
+    position: absolute;
+    top: 15%; /* Position the textbox vertically at 50% from the top */
+    left: 47%; /* Position the textbox horizontally at 50% from the left */
+}
+
+    #sevenSpadeImgHead img {
+        height: 12.8vh;
+        width: 6.4vw;
+        transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out, filter 0.3s ease-in-out;
+    }
+
+    #sevenSpadeImgHead:hover img {
+        transform: scale(1.2);
+        filter: brightness(1.1);
+        background: none;
+        
+    }
+
+
+#eightSpadeImgHead {
+    position: absolute;
+    top: 15%; /* Position the textbox vertically at 50% from the top */
+    left: 54%; /* Position the textbox horizontally at 50% from the left */
+}
+
+    #eightSpadeImgHead img {
+        height: 12.8vh;
+        width: 6.4vw;
+        transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out, filter 0.3s ease-in-out;
+    }
+
+    #eightSpadeImgHead:hover img {
+        transform: scale(1.2);
+        filter: brightness(1.1);
+        background: none;
+        
+    }
+
+
+#nineSpadeImgHead {
+    position: absolute;
+    top: 15%; /* Position the textbox vertically at 50% from the top */
+    left: 60.9%; /* Position the textbox horizontally at 50% from the left */
+}
+
+    #nineSpadeImgHead img {
+        height: 12.8vh;
+        width: 6.4vw;
+        transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out, filter 0.3s ease-in-out;
+    }
+
+    #nineSpadeImgHead:hover img {
+        transform: scale(1.2);
+        filter: brightness(1.1);
+        background: none;
+        
+    }
+
+
+#tenSpadeImgHead {
+    position: absolute;
+    top: 15%; /* Position the textbox vertically at 50% from the top */
+    left: 67.8%; /* Position the textbox horizontally at 50% from the left */
+}
+
+    #tenSpadeImgHead img {
+        height: 12.8vh;
+        width: 6.4vw;
+        transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out, filter 0.3s ease-in-out;
+    }
+
+    #tenSpadeImgHead:hover img {
+        transform: scale(1.2);
+        filter: brightness(1.1);
+        background: none;
+       
+    }
+
+
+#JSpadeImgHead {
+    position: absolute;
+    top: 15%; /* Position the textbox vertically at 50% from the top */
+    left: 74.8%; /* Position the textbox horizontally at 50% from the left */
+}
+
+    #JSpadeImgHead img {
+        height: 12.8vh;
+        width: 6.4vw;
+        transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out, filter 0.3s ease-in-out;
+    }
+
+    #JSpadeImgHead:hover img {
+        transform: scale(1.2);
+        filter: brightness(1.1);
+        background: none;
+      
+    }
+
+
+#QSpadeImgHead {
+    position: absolute;
+    top: 15%; /* Position the textbox vertically at 50% from the top */
+    left: 81.7%; /* Position the textbox horizontally at 50% from the left */
+}
+
+    #QSpadeImgHead img {
+        height: 12.8vh;
+        width: 6.4vw;
+        transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out, filter 0.3s ease-in-out;
+    }
+
+    #QSpadeImgHead:hover img {
+        transform: scale(1.2);
+        filter: brightness(1.1);
+        background: none;
+        
+    }
+
+
+#KSpadeImgHead {
+    position: absolute;
+    top: 15%; /* Position the textbox vertically at 50% from the top */
+    left: 88.6%; /* Position the textbox horizontally at 50% from the left */
+}
+
+    #KSpadeImgHead img {
+        height: 12.8vh;
+        width: 6.4vw;
+        transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out, filter 0.3s ease-in-out;
+    }
+
+    #KSpadeImgHead:hover img {
+        transform: scale(1.2);
+        filter: brightness(1.1);
+        background: none;
+     
+    }
+
+
+/* cards Symbols*/
+
+
+#diamondLabel {
+    position: absolute;
+    top: 34.9%; /* Position the textbox vertically at 50% from the top */
+    left: 10.1%; /* Position the textbox horizontally at 50% from the left */
+}
+
+    #diamondLabel img {
+        height: 8.7vh;
+        width: 8.1vw;
+        transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out, filter 0.3s ease-in-out;
+    }
+
+        #diamondLabel img:hover {
+            transform: scale(1.2);
+            filter: brightness(1.1);
+            background: none;
+        }
+
+#heartLabel {
+    position: absolute;
+    top: 34.9%; /* Position the textbox vertically at 50% from the top */
+    left: 3%; /* Position the textbox horizontally at 50% from the left */
+}
+
+    #heartLabel img {
+        height: 8.7vh;
+        width: 6vw;
+        transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out, filter 0.3s ease-in-out;
+    }
+
+    #heartLabel:hover img {
+        transform: scale(1.2);
+        filter: brightness(1.1);
+        background: none;
+    }
+
+#flowerLabel {
+    position: absolute;
+    top: 35.1%; /* Position the textbox vertically at 50% from the top */
+    left: 27.5%; /* Position the textbox horizontally at 50% from the left */
+}
+
+    #flowerLabel img {
+        height: 8.3vh;
+        width: 7.2vw;
+        transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out, filter 0.3s ease-in-out;
+    }
+
+    #flowerLabel:hover img {
+        transform: scale(1.2);
+        filter: brightness(1.1);
+        background: none;
+    }
+
+#spadeLabel {
+    position: absolute;
+    top: 34.9%; /* Position the textbox vertically at 50% from the top */
+    left: 19.2%; /* Position the textbox horizontally at 50% from the left */
+}
+
+    #spadeLabel img {
+        height: 8.7vh;
+        width: 8vw;
+        transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out, filter 0.3s ease-in-out;
+    }
+
+    #spadeLabel:hover img {
+        transform: scale(1.2);
+        filter: brightness(1.1);
+        background: none;
+    }
+
+#redLabel {
+    position: absolute;
+    top: 31.7%; /* Position the textbox vertically at 50% from the top */
+    left: 40%; /* Position the textbox horizontally at 50% from the left */
+}
+
+    #redLabel img {
+        height: 8.7vh;
+        width: 9.1vw;
+        transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out, filter 0.3s ease-in-out;
+    }
+
+    #redLabel:hover img {
+        transform: scale(1.2);
+        filter: brightness(1.1);
+        background: none;
+    }
+
+#blackLabel {
+    position: absolute;
+    top: 31.7%; /* Position the textbox vertically at 50% from the top */
+    left: 51.4%; /* Position the textbox horizontally at 50% from the left */
+}
+
+    #blackLabel img {
+        height: 8.7vh;
+        width: 8.5vw;
+        transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out, filter 0.3s ease-in-out;
+    }
+
+    #blackLabel:hover img {
+        transform: scale(1.2);
+        filter: brightness(1.1);
+        background: none;
+    }
+
+
+#ATo6 {
+    position: absolute;
+      top: 34.9%; /* the textbox vertically at 50% from the top */
+      right: 25.1%;  /*the textbox horizontally at 50% from the left */
+}
+
+    #ATo6 img {
+        height: 8.7vh;
+        width: 9.7vw;
+        transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out, filter 0.3s ease-in-out;
+    }
+
+    #ATo6:hover img {
+        transform: scale(1.2);
+        filter: brightness(1.1);
+        background: none;
+    }
+
+#sevenLabel {
+    position: absolute;
+    top: 34.9%; /* Position the textbox vertically at 50% from the top */
+    right: 14.7%; /* Position the textbox horizontally at 50% from the left */
+}
+
+    #sevenLabel img {
+        height: 8.7vh;
+        width: 8.1vw;
+        transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out, filter 0.3s ease-in-out;
+    }
+
+    #sevenLabel:hover img {
+        transform: scale(1.2);
+        filter: brightness(1.1);
+        background: none;
+    }
+
+#eight2KLabel {
+    position: absolute;
+    top: 34.7%; /* Position the textbox vertically at 50% from the top */
+    right: 2.8%; /* Position the textbox horizontally at 50% from the left */
+}
+
+    #eight2KLabel img {
+        height: 8.7vh;
+        width: 8.7vw;
+        transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out, filter 0.3s ease-in-out;
+    }
+
+    #eight2KLabel:hover img {
+        transform: scale(1.2);
+        filter: brightness(1.1);
+        background: none;
+    }
+
+
+/* Display Cards(Left/Middle/Right)*/
+
+#bGLeftLabel {
+    position: absolute;
+    top: 48.5%; /* Position the textbox vertically at 50% from the top */
+    left: 17.8%; /* Position the textbox horizontally at 50% from the left */
+}
+
+    #bGLeftLabel img {
+        height: 18.6vh;
+        width: 9.5vw;
+        /*transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out, filter 0.3s ease-in-out;*/
+    }
+
+#bGMiddleLabel {
+    position: absolute;
+    top: 47.9%; /* Position the textbox vertically at 50% from the top */
+    left: 45.3%; /* Position the textbox horizontally at 50% from the left */
+}
+
+    #bGMiddleLabel img {
+        height: 18.6vh;
+        width: 9.5vw;
+        /*transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out, filter 0.3s ease-in-out;*/
+    }
+
+#bGRightLabel {
+    position: absolute;
+    top: 48.5%; /* Position the textbox vertically at 50% from the top */
+    right: 17.9%; /* Position the textbox horizontally at 50% from the left */
+}
+
+    #bGRightLabel img {
+        height: 18.6vh;
+        width: 9.5vw;
+        /*transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out, filter 0.3s ease-in-out;*/
+    }
+
+
+/* Buttons(Andar/Bahar)*/
+
+#andarDiv {
+    position: absolute;
+    top: 69.2%; /* Position the textbox vertically at 50% from the top */
+    left: 19.6%; /* Position the textbox horizontally at 50% from the left */
+    border-radius: 99%;
+    height: 7.0vh;
+    width: 5.4vw;
+    background-color: transparent;
+    border: thin white;
+    opacity:0.8;
+    cursor: pointer;
+    transition: transform 0.1s ease-in-out, box-shadow 0.1s ease-in-out, filter 0.1s ease-in-out;
+}
+
+    #andarDiv:hover {
+        transform: scale(1.1);
+        filter: brightness(1.3);
+        background: none;
+        box-shadow: 0 0 20px #ffff;
+        cursor:pointer;
+    }
+
+#baharDiv {
+    position: absolute;
+    top: 69.2%; /* Position the textbox vertically at 50% from the top */
+    right: 19.6%; /* Position the textbox horizontally at 50% from the left */
+    border-radius: 99%;
+    height: 7.0vh;
+    width: 5.4vw;
+    background-color: transparent;
+    border: thin white;
+    cursor: pointer;
+    transition: transform 0.1s ease-in-out, box-shadow 0.1s ease-in-out, filter 0.1s ease-in-out;
+}
+
+    #baharDiv:hover {
+        transform: scale(1.1);
+        filter: brightness(1.3);
+        background: none;
+        box-shadow: 0 0 20px #ffff;
+        cursor: pointer;
+    }
+
+
+
+
+/* Coins Display*/
+#cG25 {
+    position: absolute;
+    top: 71.2%; /* Position the textbox vertically at 50% from the top */
+    left: 7.3%; /* Position the textbox horizontally at 50% from the left */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+    #cG25 img {
+        height: 10.0vh;
+        width: 7.8vw;
+
+        transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out, filter 0.3s ease-in-out;
+    }
+
+    #cG25:hover img {
+        transform: scale(1.2);
+        filter: brightness(1.4);
+        background: none;
+    }
+
+#cG50 {
+    position: absolute;
+    top: 76.2%; /* Position the textbox vertically at 50% from the top */
+    left: 14.8%; /* Position the textbox horizontally at 50% from the left */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+    #cG50 img {
+        height: 10.0vh;
+        width: 7.8vw;
+        transition: transform 0.2s ease-in-out, filter 0.3s ease-in-out;
+    }
+
+    #cG50:hover img {
+        transform: scale(1.2);
+        filter: brightness(1.4);
+        background: none;
+    }
+
+#cG10 {
+    position: absolute;
+    top: 65.4%; /* Position the textbox vertically at 50% from the top */
+    left: 0.4%; /* Position the textbox horizontally at 50% from the left */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+    #cG10 img {
+        height: 10.0vh;
+        width: 7.8vw;
+        transition: transform 0.2s ease-in-out, filter 0.3s ease-in-out;
+    }
+
+    #cG10:hover img {
+        transform: scale(1.2);
+        filter: brightness(1.4);
+        background: none;
+    }
+
+#c100 {
+    position: absolute;
+    top: 79.3%; /* Position the textbox vertically at 50% from the top */
+    left: 22.5%; /* Position the textbox horizontally at 50% from the left */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+    #c100 img {
+        height: 10.9vh;
+        width: 8.6vw;
+        transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out, filter 0.3s ease-in-out;
+    }
+
+    #c100:hover img {
+        transform: scale(1.2);
+        filter: brightness(1.4);
+        background: none;
+    }
+
+#c500 {
+    position: absolute;
+    top: 79.2%; /* Position the textbox vertically at 50% from the top */
+    right: 22.6%; /* Position the textbox horizontally at 50% from the left */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+    #c500 img {
+        height: 10.9vh;
+        width: 8.6vw;
+        transition: transform 0.2s ease-in-out, filter 0.3s ease-in-out;
+    }
+
+    #c500:hover img {
+        transform: scale(1.3);
+        filter: brightness(1.4);
+        background: none;
+    }
+
+#cG1000 {
+    position: absolute;
+    top: 76.2%; /* Position the textbox vertically at 50% from the top */
+    right: 14.8%; /* Position the textbox horizontally at 50% from the left */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+    #cG1000 img {
+        height: 10.0vh;
+        width: 7.8vw;
+        transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out, filter 0.3s ease-in-out;
+    }
+
+    #cG1000:hover img {
+        transform: scale(1.2);
+        filter: brightness(1.4);
+        background: none;
+    }
+
+#cG5000 {
+    position: absolute;
+    top: 71.2%; /* Position the textbox vertically at 50% from the top */
+    right: 7.3%; /* Position the textbox horizontally at 50% from the left */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+    #cG5000 img {
+        height: 10.0vh;
+        width: 7.8vw;
+        transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out, filter 0.3s ease-in-out;
+    }
+
+    #cG5000:hover img {
+        transform: scale(1.2);
+        filter: brightness(1.4);
+        background: none;
+    }
+
+#cG10000 {
+    position: absolute;
+    top: 65.4%; /* Position the textbox vertically at 50% from the top */
+    right: 0.4%; /* Position the textbox horizontally at 50% from the left */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+    #cG10000 img {
+        height: 10.0vh;
+        width: 7.8vw;
+        transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out, filter 0.3s ease-in-out;
+    }
+
+    #cG10000:hover img {
+        transform: scale(1.2);
+        filter: brightness(1.4);
+        background: none;
+    }
+
+/* Bottom Buttons*/
+
+.disabled {
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+#takeBtn {
+    position: absolute;
+    top: 91.5%; /* Position the textbox vertically at 50% from the top */
+    left: 15.2%; /* Position the textbox horizontally at 50% from the left */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    text-align: left;
+    transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out, filter 0.3s ease-in-out;
+    padding: 0.2vh 4.2vw 0.2vh 4.5vw;
+    border-radius: 20px;
+    font-size: 3vh;
+    border: none;
+    color: #e6c933;
+    z-index: 200;
+    /* background-color: red; */
+}
+
+    #takeBtn:hover {
+        transform: scale(1.2);
+        filter: brightness(1.1);
+        background: none;
+    }
+
+#takeGlow {
+    position: absolute;
+    top: 90.5%; /* Position the textbox vertically at 50% from the top */
+    left: 14.6%;
+    height: 6.2vh;
+    width: 4.6vw;
+    opacity: 0;
+    /* background-color: red; */
+    animation: fadeInOut 0.3s ease infinite alternate; /* Animation duration and timing */
+}
+
+@keyframes fadeInOut {
+    0%, 100% {
+        opacity: 0; /* Start and end state: hidden */
+    }
+
+    50% {
+        opacity: 100; /* Middle state: visible */
+    }
+}
+
+
+
+
+#betOkBtn {
+    position: absolute;
+    top: 91.5%; /* Position the textbox vertically at 50% from the top */
+    right: 15.4%; /* Position the textbox horizontally at 50% from the left */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    text-align: left;
+    transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out, filter 0.3s ease-in-out;
+    padding: 0.2vh 3.9vw 0.2vh 3.7vw;
+    border-radius: 20px;
+    font-size: 3vh;
+    border: none;
+    color: #e6c933;
+    z-index: 200;
+    /* background-color: red;  */
+}
+
+    #betOkBtn:hover {
+        transform: scale(1.2);
+        filter: brightness(1.1);
+        background: none;
+    }
+
+#betGlow {
+    position: absolute;
+    top: 90.5%; /* Position the textbox vertically at 50% from the top */
+    right: 14.7%;
+    height: 6.2vh;
+    width: 4.6vw;
+    opacity: 0;
+    animation: fadeInOut 0.3s ease infinite alternate; /* Animation duration and timing */
+}
+
+@keyframes fadeInOut {
+    0%, 100% {
+        opacity: 0; /* Start and end state: hidden */
+    }
+
+    50% {
+        opacity: 100; /* Middle state: visible */
+    }
+}
+
+#preBetBtn {
+    position: absolute;
+    top: 91.5%; /* Position the textbox vertically at 50% from the top */
+    right: 15.4%; /* Position the textbox horizontally at 50% from the left */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    text-align: left;
+    transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out, filter 0.3s ease-in-out;
+    padding: 0.2vh 3.9vw 0.2vh 3.7vw;
+    border-radius: 20px;
+    font-size: 3vh;
+    border: none;
+    color: #e6c933;
+    z-index: 200;
+    /* background-color: red;  */
+    display: none;
+}
+
+    #preBetBtn:hover {
+        transform: scale(1.2);
+        filter: brightness(1.1);
+        background: none;
+    }
+
+
+
+@keyframes fadeInOut {
+    0%, 100% {
+        opacity: 0; /* Start and end state: hidden */
+    }
+
+    50% {
+        opacity: 100; /* Middle state: visible */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+#exitBtn {
+    position: absolute;
+    top: 86.1%; /* Position the textbox vertically at 50% from the top */
+    right: 0.4%; /* Position the textbox horizontally at 50% from the left */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    text-align: right;
+    transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out, filter 0.3s ease-in-out;
+    padding: 0.2vh 4.3vw 0.2vh 4.9vw;
+    border-radius: 20px;
+    font-size: 3vh;
+    border: none;
+    color: #e6c933;
+    /* background-color: red;  */
+    z-index: 200;
+}
+
+    #exitBtn:hover {
+        transform: scale(1.2);
+        filter: brightness(1.1);
+        background: none;
+    }
+
+
+#cancelBtn {
+    position: absolute;
+    top: 84.5%; /* Position the textbox vertically at 50% from the top */
+    left: -0.2%; /* Position the textbox horizontally at 50% from the left */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+    #cancelBtn img {
+        height: 6.5vh;
+        width: 12.1vw;
+        transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out, filter 0.3s ease-in-out;
+        opacity: 1;
+        transition: opacity 0.5s ease-in-out;
+    }
+
+
+
+    #cancelBtn Span {
+        position: absolute;
+        top: 18%; /* Position the textbox vertically at 50% from the top */
+        right: 1.5%; /* Position the textbox horizontally at 50% from the left */
+        padding: 0.2vh 2vw 0.2vh 3.5vw;
+        border-radius: 20px;
+        font-size: 3vh;
+        border: none;
+        color: #e6c933;
+        opacity: 1;
+        transition: opacity 0.5s ease-in-out;
+        transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out, filter 0.3s ease-in-out;
+    }
+
+        #cancelBtn Span:hover {
+            transform: scale(1.2);
+            filter: brightness(1.1);
+            background: none;
+        }
+
+
+/*Last Five Cards Display */
+
+#cardLastFive {
+    position: absolute;
+    top: 84%; /* Position the textbox vertically at 50% from the top */
+    right: 35.6%; /* Position the textbox horizontally at 50% from the left */
+}
+
+    #cardLastFive img {
+        height: 7.5vh;
+        width: 3.9vw;
+        /*transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out, filter 0.3s ease-in-out;*/
+    }
+
+#cardLastFour {
+    position: absolute;
+    top: 84.9%; /* Position the textbox vertically at 50% from the top */
+    right: 41.9%; /* Position the textbox horizontally at 50% from the left */
+}
+
+    #cardLastFour img {
+        height: 7.5vh;
+        width: 3.9vw;
+        /*transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out, filter 0.3s ease-in-out;*/
+    }
+
+#cardLastThree {
+    position: absolute;
+    top: 85.5%; /* Position the textbox vertically at 50% from the top */
+    right: 48.1%; /* Position the textbox horizontally at 50% from the left */
+}
+
+    #cardLastThree img {
+        height: 7.5vh;
+        width: 3.9vw;
+        /*transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out, filter 0.3s ease-in-out;*/
+    }
+
+#cardLastSecond {
+    position: absolute;
+    top: 84.9%; /* Position the textbox vertically at 50% from the top */
+    left: 41.9%; /* Position the textbox horizontally at 50% from the left */
+}
+
+    #cardLastSecond img {
+        height: 7.5vh;
+        width: 3.9vw;
+        /*transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out, filter 0.3s ease-in-out;*/
+    }
+
+#cardLastOne {
+    position: absolute;
+    top: 84%; /* Position the textbox vertically at 50% from the top */
+    left: 35.6%; /* Position the textbox horizontally at 50% from the left */
+}
+
+    #cardLastOne img {
+        height: 7.5vh;
+        width: 3.9vw;
+        /*transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out, filter 0.3s ease-in-out;*/
+    }
+
+
+
+
+/*Timer */
+.timer-container {
+    position: absolute;
+    height: 12.4vh;
+    width: 14vw;
+    top: 70%;
+    left: 45%;
+}
+
+svg {
+    width: 70%;
+    height: 100%;
+    position: absolute;
+}
+
+.timer-circle {
+    position: absolute;
+    fill: none;
+    stroke: orange; /* Red color for progress */
+    stroke-width: 17;
+    stroke-linecap: round;
+    transform: rotate(-90deg);
+    transform-origin: center;
+    transition: stroke-dashoffset 1s linear, stroke 0.5s ease;
+}
+
+.timer-text {
+    font-size: 24px;
+    font-weight:bold;
+    text-anchor: middle;
+    dominant-baseline: middle;
+    fill: #ffff;
+}
+
+/* Timer Blink */
+.blink {
+    animation: blink-animation 1s infinite;
+}
+
+@keyframes blink-animation {
+    0%, 50%, 100% {
+        opacity: 1;
+    }
+    25%, 75% {
+        opacity: 0;
+    }
+}
+
+
+
+
+/* Card Scrolling */
+.image-container1 {
+    width: 10vw;
+    height: 22.2vh;
+    overflow: hidden; /* Hide overflowing content */
+    position: absolute;
+    top: 46.1%;
+    left: 45%;
+   /* border:4px solid yellow;*/
+}
+
+#scrollImg {
+    position: absolute;
+    left: 0;
+    width: 10vw; /* Resize image to fit container width */
+    height: 300vh; /* Maintain aspect ratio */
+    animation: scrollImage 0.2s linear infinite ; /* Initially paused */
+    
+}
+
+@keyframes scrollImage {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-100%); /* Adjust based on container height */
+    }
+}
+
+/* Card Scrolling */
+.image-containerMain {
+    width: 10vw;
+    height: 22.2vh;
+    overflow: hidden; /* Hide overflowing content */
+    position: absolute;
+    top: 46.1%;
+    left: 45%;
+   /* border:4px solid yellow;*/
+}
+
+#scrollImgMain {
+    position: absolute;
+    left: 0;
+    width: 10vw; /* Resize image to fit container width */
+    height: 300vh; /* Maintain aspect ratio */
+    animation: scrollImageMain 0.2s linear infinite ; /* Initially paused */
+    
+}
+
+@keyframes scrollImageMain {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-100%); /* Adjust based on container height */
+    }
+}
+
+
+
+
+.slotCardsDisplay {
+    position: absolute;
+    top: 47.9%; /* Position the textbox vertically at 50% from the top */
+    left: 45.3%; /* Position the textbox horizontally at 50% from the left */
+    height: 18.6vh;
+    width: 9.5vw;
+     /*border:solid 3px yellow;*/
+}
+
+.slotCardsDisplay img{
+   
+    height: 18.6vh;
+    width: 9.5vw;
+  
+}
+
+.lastFiveDataCards {
+    position: absolute;
+    top: 84%; /* Position the textbox vertically at 50% from the top */
+    right: 35.6%; /* Position the textbox horizontally at 50% from the left */
+    height: 7.5vh;
+    width: 3.9vw;
+    
+}
+
+
+
+    /*Girl Animation*/
+    #OneImg {
+    position: absolute;
+    top: 73%;
+    left: 0;
+    width: 22vw;
+    height: 23vh;
+   /* border:solid 3px yellow;*/
+}
+
+#TwoImg {
+    position: absolute;
+    top: 73%;
+    left: 0;
+    width: 22vw;
+    height: 23vh;
+}
+
+#ThreeImg {
+    position: absolute;
+    top: 73%;
+    left: 0;
+    width: 22vw;
+    height: 23vh;
+}
+
+#FourImg {
+    position: absolute;
+    top: 73%;
+    left: 0;
+    width: 22vw;
+    height: 23vh;
+}
+
+#OneeImg {
+    position: absolute;
+    top: 73%;
+    left: 0;
+    width: 22vw;
+    height: 23vh;
+}
+
+#FiveImg {
+    position: absolute;
+    top: 73%;
+    left: 0;
+    width: 22vw;
+    height: 23vh;
+}
+
+#SixImg {
+    position: absolute;
+    top: 73%;
+    left: 0;
+    width: 22vw;
+    height: 23vh;
+}
+
+#SevenImg {
+    position: absolute;
+    top: 73%;
+    left: 0;
+    width: 22vw;
+    height: 23vh;
+}
+
+
+
+
+
+
+
+/* Swapped image */
+#swapped-image {
+    position:absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    height: 5.4vh;
+    width: 7.4vw;
+    z-index: 2;
+}
+
+
+#newSwappedImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    height: 5.4vh;
+    width: 7.4vw;
+    z-index: 2;
+}
+
+.coin-value-label {
+    position: absolute;
+    top: 36%;
+    left: 21%;
+    z-index: 12;
+    text-align: center;
+    background-color: transparent;
+    /* display: none; */
+    height: 3.4vh;
+    width: 3.4vw;
+    border-radius: 3px;
+    font-size:2.18vw;
+    font-weight: 900;
+    color:black;
+}
+
+.coin-value-label-left {
+    position: absolute;
+    top: 62%;
+    left: 29%;
+    z-index: 12;
+    text-align: center;
+    background-color: transparent;
+    /* display: none; */
+    height: 3.4vh;
+    width: 3.4vw;
+    border-radius: 3px;
+    font-size:2.1vw;
+    font-weight: 900;
+    color:black;
+
+}
+
+.coin-value-label-right {
+    position: absolute;
+    top: 62%;
+    left: 29%;
+    z-index: 12;
+    text-align: center;
+    background-color: transparent;
+    /* display: none; */
+    height: 3.4vh;
+    width: 3.4vw;
+    border-radius: 3px;
+    font-size:2.1vw;
+    font-weight: 900;
+    color:black;
+
+}
+
+
+.coin-value-label-midldle {
+    position: absolute;
+    top: 62%;
+    left: 29%;
+    z-index: 12;
+    text-align: center;
+    background-color: transparent;
+    /* display: none; */
+    height: 3.4vh;
+    width: 3.4vw;
+    border-radius: 3px;
+    font-size:2.1vw;
+    font-weight: 900;
+    color:black;
+
+}
+
+.coin-value-label-btn {
+    position: absolute;
+    top: 25%;
+    left: 16%;
+    z-index: 12;
+    text-align: center;
+    background-color: transparent;
+    /* display: none; */
+    height: 3.4vh;
+    width: 3.4vw;
+    border-radius: 3px;
+    font-size:2.1vw;
+    font-weight: 900;
+    color:black;
+
+}
+
+.highlight {
+    
+   
+    transition: transform 0.2s ease-in-out, filter 0.3s ease-in-out;
+    animation: highlight 1s infinite alternate;
+}
+
+@keyframes highlight {
+  0% {
+    transform: scale(1);
+    filter: brightness(1);
+  }
+  100% {
+    transform: scale(1.2);
+    filter: brightness(1.2);
+  }
+}
+
+.highlightBtn {
+   
+     transition: transform 0.2s ease-in-out, filter 0.3s ease-in-out;
+     animation: highlight2 1s infinite alternate;
+ }
+ .highlightBtn #andarDiv {
+    background-color: red;
+  }
+ 
+ @keyframes highlight2 {
+   0% {
+     transform: scale(1);
+     filter: brightness(1);
+   }
+   100% {
+     transform: scale(1.3);
+     filter: brightness(1.4);
+   }
+ } 
+
+
+  #fullscreenButton, #exitFullscreenButton {
+    margin: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+}
+
+#fullscreenButton {
+    left: 20px;
+}
+
+#exitFullscreenButton {
+    right: 20px;
+}
+
+#fullscreenButton:hover, #exitFullscreenButton:hover {
+    background-color: #ddd;
+}
+
+
+
+/* #card {
+    width: 5vw;
+    height: 7vh;
+    position: absolute;
+    top: 100px; 
+    left: 100px; 
+    opacity: 1;
+    background-color: #e6c933;
+}
+
+#card img {
+    position: absolute;
+    top: 0; 
+    left: 0; 
+    width: 5vw;
+    height: 7vh;
+    border-radius: 5px;
+} */
+
+
+
+#topContainer {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    position: absolute;
+    top: 44.5%;
+    left: 25%;
+    display: none;
+}
+
+#bGLeftLabel2 {
+    border: 1px solid black;
+    position: absolute;
+    top: 48.5%;
+    left: -3.5%;
+    height: 18.6vh;
+    width: 9.5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+#bGRightLabel2 {
+    border: 1px solid black;
+    position: absolute;
+    top: 48.5%;
+    right: -49.5%;
+    height: 18.6vh;
+    width: 9.5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+#bottomContainer {
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 72%;
+    left: 10%;
+    display: none;
+}
+
+#card {
+    position: absolute;
+    width: 100px;
+    transition: transform 1s ease;
+    display: none;
+}
+
+#card img {
+    height: 12vh;
+    width: 5vw;
+    display: none;
+}
+
+.move-to-left {
+    animation: moveToLeft 2s forwards;
+}
+
+.move-to-right {
+    animation: moveToRight 2s forwards;
+}
+
+/* @keyframes moveToLeft {
+    0% {
+        transform: translateY(0) scale(0.5) rotate(0deg);
+        opacity: 0;
+    }
+    50% {
+        transform: translate(calc(var(--left-x) / 2), calc(var(--left-y) / 2))  scale(2) rotate(180deg);
+        opacity: 0.3;
+    }
+    100% {
+        transform: translate(var(--left-x), var(--left-y)) scale(1) rotate(0deg);
+        opacity: 0;
+    }
+}
+
+@keyframes moveToRight {
+    0% {
+        transform: translateY(0) scale(0.5) rotate(0deg);
+        opacity: 0;
+    }
+    50% {
+        transform: translate(calc(var(--right-x) / 2), calc(var(--right-y) / 2)) scale(0.75) rotate(180deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(var(--right-x), var(--right-y)) scale(2) rotate(0deg);
+        opacity: 0.2;
+    }
+} */
+
+@keyframes moveToLeft {
+    0% {
+        transform: translateY(0) scale(0.5) rotate(0deg);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(var(--left-x), var(--left-y)) scale(2) rotate(0deg);
+        opacity: 2;
+    }
+}
+
+@keyframes moveToRight {
+    0% {
+        transform: translateY(0) scale(0.5) rotate(90deg);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(var(--right-x), var(--right-y)) scale(2) rotate(0deg);
+        opacity: 0.5;
+    }
+}
+
+.disabled {
+    pointer-events: none;
+    opacity: 0.5;
+  }
+
+  img {
+    pointer-events: none; /* Disable pointer events on images */
+}
